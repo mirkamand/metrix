@@ -4,11 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Metrix</title>
 </head>
 
 <body>
-    <div>Test</div>
+    <!-- Slider main container -->
+    <div class="swiper banner_slider">
+        <nav class="navbar">
+            <div class="logo"><a href=""><img src="logos/Frame.png" alt=""></a></div>
+            <ul>
+                <li><a href="#">Haqqımızda</a></li>
+                <li><a href="#">Enerjilər</a></li>
+                <li><a href="#">Xidmətlər</a></li>
+                <li><a href="#">Lahiyələr</a></li>
+                <li><a href="#">Əlaqə</a></li>
+                <li class="search_logo"><a href="#"><img src="logos/Vector1.png" alt=""></a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide slide_1">
+                <div class="text_container">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officiis!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, deleniti unde! Culpa expedita
+                        omnis provident illo suscipit maiores, eius explicabo.</p>
+                    <div class="btn"><a href="#">Ətraflı</a></div>
+                </div>
+            </div>
+            <div class="swiper-slide slide_2">
+                <div class="text_container">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officiis!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, deleniti unde! Culpa expedita
+                        omnis provident illo suscipit maiores, eius explicabo.</p>
+                    <div class="btn"><a href="#">Ətraflı</a></div>
+                </div>
+            </div>
+            <div class="swiper-slide slide_3">
+                <div class="text_container">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officiis!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, deleniti unde! Culpa expedita
+                        omnis provident illo suscipit maiores, eius explicabo.</p>
+                    <div class="btn"><a href="#">Ətraflı</a></div>
+                </div>
+            </div>
+            ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".banner_slider", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 
 </html>
