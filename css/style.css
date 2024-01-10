@@ -169,6 +169,10 @@ body {
   background-color: #00a6d9;
 }
 
+.swiper-pagination-bullets {
+  margin-bottom: 2.5rem;
+}
+
 .swiper-pagination-bullets .swiper-pagination-bullet {
   background-color: white;
   width: 14px;
