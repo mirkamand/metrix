@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
 
+:root {
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+}
+
 *,
 *::before,
 *::after {
@@ -12,12 +16,8 @@ body {
   font-family: "Inter";
 }
 
-.swiper {
-  position: relative;
-}
-
-.navbar {
-  display: flex;
+.primary_nav_wrapper {
+  /* display: flex; */
   justify-content: space-between;
   position: absolute;
   z-index: 100;
@@ -26,35 +26,49 @@ body {
   margin-top: 20px;
 }
 
-.navbar .logo {
-  margin-left: 130px;
+.primary_nav {
+  max-width: 1320px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
-.navbar .logo img {
+.primary_nav_wrapper .logo {
+  /* margin-left: 130px; */
+}
+
+.primary_nav_wrapper .logo img {
   width: 225.67px;
   height: 56px;
 }
 
-.navbar ul {
+.primary_nav_wrapper ul {
   list-style: none;
   display: flex;
-  margin-right: 130px;
 }
 
-.navbar ul > li {
+.primary_nav_wrapper ul > li {
+  align-self: center;
+}
+.primary_nav_wrapper ul > li:not(:last-child) {
   padding-right: 2rem;
 }
 
-.navbar ul > li a:hover {
+.primary_nav_wrapper ul a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.primary_nav_wrapper ul > li a:hover {
   text-decoration: underline;
 }
 
-.navbar ul a {
-  text-decoration: none;
-  color: white;
-}
-
-.navbar .search_logo img {
+.primary_nav_wrapper .search_logo img {
   width: 25px;
   height: 25px;
 }
@@ -67,9 +81,16 @@ body {
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.371);
+  background-color: rgba(0, 0, 0, 0.522);
   background-attachment: fixed;
   position: relative;
+}
+
+.swiper-wrapper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-wrapper > .slide_1 {
@@ -84,25 +105,47 @@ body {
   background-image: url("../images/wallpaper3.jpg");
 }
 
-.swiper-slide .text_container h1 {
+.swiper-slide .slider_text_areah1 {
   font-weight: 600;
 }
 
-.swiper-slide .text_container {
-  height: 300px;
+.slider_text_wrapper {
+  width: 100%;
+}
 
+.swiper-slide .slider_text_area {
+  height: 300px;
+  max-width: 1320px;
   text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.2);
   color: white;
-  position: absolute;
+  /* max-width: 783px; */
+  max-width: 1320px;
+  height: 100%;
+  margin: auto;
+}
+
+.slider_text_container {
   max-width: 783px;
-  top: 229px;
-  left: 130px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.swiper-slide .text_container .btn {
+.swiper-slide .slider_text_area .slider_caption {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 56px;
+  letter-spacing: 1.5px;
+}
+
+.swiper-slide .slider_text_area .slider_text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+}
+
+.swiper-slide .slider_text_area .btn {
   width: 210px;
   height: 56px;
   border-radius: 10px;
@@ -111,17 +154,41 @@ body {
   align-items: center;
 }
 
-.swiper-slide .text_container .btn a {
+.swiper-slide .slider_text_area .btn a {
   text-decoration: none;
   color: white;
 }
 
-.swiper-slide .text_container .btn {
+.swiper-slide .slider_text_area .btn {
   background-color: #0094d9;
   transition: 200ms linear;
 }
 
-.swiper-slide .text_container .btn:hover {
+.swiper-slide .slider_text_area .btn:hover {
   cursor: pointer;
   background-color: #00a6d9;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: white;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: relative;
+  opacity: 1;
+  margin: var(--swiper-pagination-bullet-horizontal-gap);
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet-active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -12px;
+  margin-left: -12px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid white;
+  border-radius: 50%;
 }
