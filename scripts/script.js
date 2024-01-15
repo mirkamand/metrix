@@ -29,3 +29,11 @@ window.addEventListener("click", function (e) {
     primary_nav_wrapper.classList.toggle("sticky_search");
   }
 });
+
+window.addEventListener("touchstart", function (e) {
+  if (e.target.classList.value == "search_overlay show") {
+    search_overlay.classList.toggle("show");
+    search_btn.classList.toggle("active");
+    primary_nav_wrapper.classList.toggle("sticky_search");
+  }
+});
