@@ -108,7 +108,7 @@ body {
   transition: 0.8s;
   transform: scale(0);
   padding: 2rem;
-  margin-top: 300px;
+  margin-top: 200px;
 }
 
 .search_overlay.show form {
@@ -255,6 +255,8 @@ body {
 
 .primary_nav_wrapper .search_btn {
   align-self: center;
+  border: none;
+  background: none;
   margin-left: 2rem;
   width: 55px;
   height: 55px;
@@ -426,11 +428,164 @@ body {
   border-radius: 50%;
 }
 
+/* ========================================================= */
+/* ==================== Services Section ================= */
+/* ========================================================= */
+
+.container {
+  max-width: 1320px;
+  border: 2px solid red;
+  margin: auto;
+}
+
+.services_cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 4rem 0;
+  gap: 2rem;
+}
+
+.services_cards .card {
+  border: 1px solid #dadada;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 230px;
+  border-radius: 10px;
+  transition: 0.3s;
+  flex: 1 1 auto;
+}
+
+.services_cards .card:hover {
+  transform: scale(1.1);
+  border: 1px solid #0094d9;
+}
+
+.services_cards .card a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #0094d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+}
+
+.services_cards .card a .text {
+  display: block;
+  min-height: 60px;
+}
+
+.services_cards .card .frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 102px;
+  height: 102px;
+  border-radius: 50%;
+  background-color: #fafafa;
+  margin: 1rem;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.services_cards .card:hover .frame {
+  transform: scale(1.2);
+}
+
+/* ========================================================= */
+/* ==================== Who we are? ================= */
+/* ========================================================= */
+
+.text_info_wrapper {
+  border: 2px solid orange;
+  position: relative;
+  height: 535px;
+  background-image: url("../images/biz_kimik.jpg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.text_info_wrapper .text_block {
+  position: absolute;
+  height: 100%;
+  max-width: 760px;
+  top: 40px;
+  left: 300px;
+  transition: 0.3s;
+}
+
+.text_info_wrapper:hover .text_block {
+  transform: scale(1.1);
+}
+
+.text_info_wrapper .text_block .caption {
+  color: #0094d9;
+  border-right: 12px solid #0094d9;
+  text-align: right;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.text_info_wrapper .text_block .caption span {
+  display: block;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-right: 2rem;
+}
+
+.text_info_wrapper .text_block .descript {
+  background-color: #fafafa;
+  padding: 2rem;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 1.5px;
+  border: 2px dashed transparent;
+  transition: 0.3s;
+}
+
+.text_info_wrapper:hover .text_block .descript {
+  border: 2px dashed #0094d9;
+}
+
+/* ========================= Media Queries ========================= */
+
 /* =================== 1350px =================== */
 
 @media screen and (max-width: 1350px) {
   .primary_nav_wrapper .nav_items {
     display: none;
+  }
+
+  .primary_nav {
+    max-width: 950px;
+  }
+
+  .container {
+    max-width: 950px;
+  }
+
+  .services_cards {
+    margin: 2rem;
+  }
+
+  .text_info_wrapper {
+    margin: 2rem;
   }
 
   .hamburger_menu {
@@ -456,13 +611,7 @@ body {
   .swiper-slide .slider_text_area {
     max-width: 950px;
   }
-
-  .primary_nav {
-    max-width: 950px;
-  }
 }
-
-/* ========================= Media Queries ========================= */
 
 /* =================== 1024px =================== */
 
@@ -505,6 +654,10 @@ body {
     letter-spacing: 1px;
     margin-bottom: 1rem;
   }
+
+  .text_info_wrapper .text_block {
+    top: 0px;
+  }
 }
 
 /* =================== 800px =================== */
@@ -522,6 +675,24 @@ body {
     font-size: 25px;
     letter-spacing: 1px;
     margin-bottom: 1rem;
+  }
+
+  .text_info_wrapper .text_block {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    border: 2px solid turquoise;
+    max-width: 760px;
+  }
+
+  .text_info_wrapper .text_block .descript {
+    background-color: #dbdbdba9;
+    height: 100%;
+  }
+
+  .text_info_wrapper {
+    background-size: cover;
+    background-position: bottom;
   }
 }
 
