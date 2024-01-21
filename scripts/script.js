@@ -7,7 +7,7 @@ const primary_nav_wrapper = document.querySelector(".primary_nav_wrapper");
 const btns_toggle = document.querySelectorAll("[data-toggle]");
 
 window.addEventListener("scroll", function () {
-  primary_nav_wrapper.classList.toggle("sticky", window.scrollY > 70);
+  primary_nav_wrapper.classList.toggle("sticky", window.scrollY > 60);
 });
 
 // let active_btn = null;
