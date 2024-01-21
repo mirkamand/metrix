@@ -151,7 +151,7 @@
             <div class="container">
                 <div class="text_info_wrapper">
                     <!-- <img src="images/biz_kimik.jpg" alt="">  -->
-                    <div class="text_block">
+                    <div class="text_container">
                         <div class="caption"><span>Biz Kimik?</span></div>
                         <div class="descript">Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
@@ -164,7 +164,58 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="container_fluid">
+                <div class="video_container">
+                    <div class="play_wrapper">
+                        <i class="fa-solid fa-play fa-5x"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="swiper swiper_blogs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide blog">
+                            <a href="#">
+                                <div class="frame">
+                                    <img src="images/metrix_image3.jpg" alt="">
+                                </div>
+                                <div class="title">Dolores eum consequatur fugit adipiscpossimus
+                                    distinctio reprehenderit</div>
+                                <div class="subtitle">Consequatur tenetur provident, officia velit ad expedita qui iure
+                                    delectus.</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide blog">
+                            <a href="#">
+                                <div class="frame">
+                                    <img src="images/metrix_image2.jpg" alt="">
+                                </div>
+                                <div class="title">Enim autem sequi inventore deserunt repellendus nihil corporis</div>
+                                <div class="subtitle">Illo consectetur veritatis voluptatem illum aliquid itaque aliquam
+                                    enim fugiat est eaque!</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide blog">
+                            <a href="#">
+                                <div class="frame">
+                                    <img src="images/metrix_image1.jpg" alt="">
+                                </div>
+                                <div class="title">Recusandae quisquam neque adipisci repellendus sint ex minima
+                                    voluptas fugit.</div>
+                                <div class="subtitle">
+                                    Maxime omnis sit corrupti quo dolorum veritatis, voluptatum quasi.
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+    <script src="https://kit.fontawesome.com/229425d5d4.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/script.js"></script>
     <script>
@@ -172,6 +223,25 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
+            },
+        });
+
+        var swiper = new Swiper(".swiper_blogs", {
+            watchSlidesProgress: true,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                    slidesOffsetAfter: 50,
+                },
+                768: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
             },
         });
     </script>
