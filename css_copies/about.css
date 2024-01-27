@@ -1,0 +1,155 @@
+.about .about_wrapper {
+  min-height: 1000px;
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.about .about_wrapper .card {
+  display: flex;
+  position: relative;
+}
+
+.about .about_wrapper .card .frame {
+  line-height: 0;
+  font-size: 0;
+}
+
+.about .about_wrapper .card .text_container {
+  position: absolute;
+  max-width: 760px;
+  top: 40px;
+  left: 300px;
+}
+
+.about .about_wrapper .card.second .frame {
+  margin-left: auto;
+  position: relative;
+}
+
+.about .about_wrapper .card .frame .header {
+  display: none;
+  font-size: 50px;
+  color: #0094d9;
+  border-left: 12px solid #0094d9;
+  height: 66px;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about .about_wrapper .card .frame .header span {
+  display: block;
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.about .about_wrapper .card.second img {
+  width: 500px;
+}
+
+.about .about_wrapper .card.second .text_container {
+  top: 80px;
+  left: 100px;
+}
+
+.about .about_wrapper .card .text_container .caption {
+  color: #0094d9;
+  border-right: 12px solid #0094d9;
+  text-align: right;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.about .about_wrapper .card .text_container .caption span {
+  display: block;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-right: 2rem;
+}
+
+.about .about_wrapper .card .text_container .descript {
+  background-color: #fafafa;
+  padding: 2rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 1350px) {
+  .about .about_wrapper .card .text_container {
+    top: 0px;
+  }
+
+  .about .about_wrapper .card .text_container {
+    max-width: 560px;
+  }
+  .about .about_wrapper .card.second .text_container {
+    top: 40px;
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about .about_wrapper {
+    gap: 0;
+  }
+
+  .about .about_wrapper .card {
+    flex-direction: column;
+  }
+
+  .about .about_wrapper .card .frame .header {
+    display: flex;
+  }
+
+  .about .about_wrapper .card .frame .header span,
+  .about .about_wrapper .card .text_container .caption span {
+    font-size: 25px;
+  }
+
+  .about .about_wrapper .card .text_container {
+    position: static;
+  }
+
+  .about .about_wrapper .card .text_container {
+    max-width: 100%;
+  }
+
+  .about .about_wrapper .card .text_container .caption {
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+    height: 66px;
+    justify-content: flex-start;
+    border-left: 12px solid #0094d9;
+    border-right: 0;
+  }
+
+  .about .about_wrapper .card .text_container .caption span {
+    margin-right: 0;
+    margin-left: 2rem;
+  }
+
+  .about .about_wrapper .card .frame img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about .about_wrapper .card.second .frame {
+    margin-left: 0;
+  }
+
+  .about .about_wrapper .card .text_container .descript {
+    padding: 2rem 0;
+    font-size: 17px;
+    background-color: white;
+  }
+}
