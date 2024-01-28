@@ -5,6 +5,16 @@ const search_overlay = document.querySelector(".search_overlay");
 const search_btn = document.querySelector(".search_btn");
 const primary_nav_wrapper = document.querySelector(".primary_nav_wrapper");
 const btns_toggle = document.querySelectorAll("[data-toggle]");
+const active_page = window.location.pathname;
+
+const nav_links = document.querySelectorAll(".nav_items a");
+
+nav_links.forEach((link) => {
+  if (link.href.includes(`${active_page}`)) {
+    link.classList.add("active");
+    console.log(active_page);
+  }
+});
 
 window.addEventListener("scroll", function () {
   primary_nav_wrapper.classList.toggle("sticky", window.scrollY > 60);
@@ -79,4 +89,32 @@ window.addEventListener("touchstart", function (e) {
     search_btn.classList.toggle("active");
     primary_nav_wrapper.classList.toggle("sticky_search");
   }
+});
+
+// Swiper Slide Section
+
+var swiper = new Swiper(".banner_slider", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+var swiper = new Swiper(".swiper_blogs", {
+  watchSlidesProgress: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+      slidesOffsetAfter: 80,
+    },
+    768: {
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
 });

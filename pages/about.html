@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css_copies/about.css">
     <title>Metrix</title>
 </head>
 
@@ -14,8 +13,8 @@
     <div class="main_container">
         <div class="menu_overlay">
             <ul class="nav_items">
-                <li class="nav_item"><a href="#">Haqqımızda</a></li>
-                <li class="nav_item"><a href="#">Enerjilər</a></li>
+                <li class="nav_item"><a href="../pages/about.html">Haqqımızda</a></li>
+                <li class="nav_item"><a href="../pages/services.html">Enerjilər</a></li>
                 <li class="nav_item"><a href="#">Xidmətlər</a></li>
                 <li class="nav_item"><a href="#">Lahiyələr</a></li>
                 <li class="nav_item"><a href="#">Əlaqə</a></li>
@@ -33,13 +32,13 @@
                 <div class="container primary_nav">
                     <div class="logo"><a href="../index.html"><img src="../logos/metrix_logo.png" alt=""></a></div>
                     <ul class="nav_items">
-                        <li class="nav_item"><a href="#">Haqqımızda</a></li>
-                        <li class="nav_item"><a href="#">Enerjilər</a></li>
+                        <li class="nav_item"><a href="../pages/about.html">Haqqımızda</a></li>
+                        <li class="nav_item"><a href="../pages/services.html">Enerjilər</a></li>
                         <li class="nav_item"><a href="#">Xidmətlər</a></li>
                         <li class="nav_item"><a href="#">Lahiyələr</a></li>
                         <li class="nav_item"><a href="#">Əlaqə</a></li>
                     </ul>
-                    <button class="search_btn" name="btn_toggle" data-toggle="null"><img src="logos/search_logo.png"
+                    <button class="search_btn" name="btn_toggle" data-toggle="null"><img src="../logos/search_logo.png"
                             alt=""></button>
                     <div class="hamburger_menu" name="btn_toggle" data-toggle="null">
                         <span class="bar top"></span>
@@ -154,6 +153,47 @@
             </div>
         </section>
 
+        <section>
+            <div class="container mission">
+                <div class="mission_wrapper">
+                    <div class="caption"><span>Missiyamız</span></div>
+                    <div class="cards">
+                        <div href="#" class="card">
+                            <div class="icon"><img src="../images/ecofriendly.png" alt=""></div>
+                            <div class="text_container">
+                                <div class="title">Sustainable solutions</div>
+                                <div class="text">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum
+                                    has been the industry.
+                                </div>
+                            </div>
+                        </div>
+                        <div href="#" class="card">
+                            <div class="icon"><img src="../images/credibility.png" alt=""></div>
+                            <div class="text_container">
+                                <div class="title">Guided by integrity</div>
+                                <div class="text">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry. natus labore quod repellendus!
+                                </div>
+                            </div>
+                        </div>
+                        <div href="#" class="card">
+                            <div class="icon"><img src="../images/satisfaction.png" alt=""></div>
+                            <div class="text_container">
+                                <div class="title">Client satisfaction</div>
+                                <div class="text">
+                                    Repudiandae accusamus, dignissimos ad quod incidunt soluta consequuntur beatae
+                                    dolorum corrupti veniam tempore. Maxime quo veniam atque necessitatibus a
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer>
             <div class="container">
                 <div class="footer_nav">
@@ -185,7 +225,7 @@
                 </div>
                 <div class="footer_text">
                     <div class="copyright">© 2023 Bütün hüquqlar qorunur.</div>
-                    <div class="footer_logo"><img src="images/proton-logo.svg" alt=""></div>
+                    <div class="footer_logo"><img src="../images/proton-logo.svg" alt=""></div>
                 </div>
             </div>
         </footer>
@@ -193,33 +233,6 @@
     <script src="https://kit.fontawesome.com/229425d5d4.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../scripts/script.js"></script>
-    <script>
-        var swiper = new Swiper(".banner_slider", {
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-
-        var swiper = new Swiper(".swiper_blogs", {
-            watchSlidesProgress: true,
-            breakpoints: {
-                0: {
-                    slidesPerView: 1.2,
-                    spaceBetween: 10,
-                    slidesOffsetAfter: 80,
-                },
-                768: {
-                    slidesPerView: 2.2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                },
-            },
-        });
-    </script>
 </body>
 
 </html>

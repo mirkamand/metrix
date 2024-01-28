@@ -1,3 +1,5 @@
+/* ========== About Us =========== */
+
 .about .about_wrapper {
   min-height: 1000px;
   margin: 4rem 0;
@@ -56,22 +58,29 @@
   left: 100px;
 }
 
-.about .about_wrapper .card .text_container .caption {
+.about .about_wrapper .card .text_container .caption,
+.mission .mission_wrapper .caption {
   color: #0094d9;
-  border-right: 12px solid #0094d9;
-  text-align: right;
   height: 96px;
   display: flex;
   align-items: center;
+}
+
+.about .about_wrapper .card .text_container .caption {
   justify-content: flex-end;
+  border-right: 12px solid #0094d9;
   margin-bottom: 1.5rem;
 }
 
-.about .about_wrapper .card .text_container .caption span {
+.about .about_wrapper .card .text_container .caption span,
+.mission .mission_wrapper .caption span {
   display: block;
   font-weight: 600;
   font-size: 32px;
   letter-spacing: 2px;
+}
+
+.about .about_wrapper .card .text_container .caption span {
   margin-right: 2rem;
 }
 
@@ -82,6 +91,96 @@
   font-size: 16px;
   line-height: 28px;
   letter-spacing: 1.5px;
+}
+
+/* ========== Mission =========== */
+
+.mission .mission_wrapper {
+  margin-bottom: 4rem;
+}
+
+.mission .mission_wrapper .caption {
+  border-left: 12px solid #0094d9;
+  margin-bottom: 2.5rem;
+}
+
+.mission .mission_wrapper .caption span {
+  margin-left: 2rem;
+}
+
+.misson .missions_container {
+  display: flex;
+}
+
+.mission .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.mission .cards .card {
+  color: #303030;
+  cursor: pointer;
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mission .cards .card:not(:last-child) {
+  border-right: 1px solid #dadada;
+  padding-right: 2rem;
+}
+
+.mission .cards .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  background-color: #fafafa;
+  border-radius: 50%;
+  border: 1px dashed #dadada;
+  transition: 0.3s;
+}
+
+.mission .cards .card:hover .icon {
+  transform: scale(1.03);
+  border: 1px dashed #0094d9;
+}
+
+.mission .cards .icon img {
+  width: 60px;
+  transition: 0.3s;
+}
+
+.mission .cards .card:hover img {
+  transform: scale(1.1);
+}
+
+.mission .cards .title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+  margin: 1rem 0;
+}
+
+.mission .cards .text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 1.5px;
+}
+
+.mission .cards .title,
+.mission .cards .text {
+  transition: 0.3s;
+}
+
+.mission .cards .card:hover .title,
+.mission .cards .card:hover .text {
+  color: #0094d9;
 }
 
 @media screen and (max-width: 1350px) {
@@ -95,6 +194,15 @@
   .about .about_wrapper .card.second .text_container {
     top: 40px;
     left: 0px;
+  }
+
+  .mission .cards .card {
+    flex: 1 1 250px;
+  }
+
+  .mission .cards .card:not(:last-child) {
+    border-right: none;
+    padding-right: 0;
   }
 }
 
@@ -151,5 +259,21 @@
     padding: 2rem 0;
     font-size: 17px;
     background-color: white;
+  }
+
+  .mission .mission_wrapper .caption {
+    height: 66px;
+  }
+
+  .mission .mission_wrapper .caption span {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .mission .cards .card {
+    align-items: center;
+    justify-self: center;
+    text-align: center;
   }
 }

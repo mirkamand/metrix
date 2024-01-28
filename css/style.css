@@ -102,25 +102,6 @@ body {
   padding: 2rem;
   margin-top: 200px;
 }
-.search_overlay form input {
-  height: 5rem;
-  border: 0;
-  font-size: 1.8rem;
-}
-.search_overlay form input:not(:-moz-placeholder-shown) {
-  border-radius: 0.7rem 0 0 0.7rem;
-  width: calc(100% - 6rem);
-}
-.search_overlay form input:not(:placeholder-shown) {
-  border-radius: 0.7rem 0 0 0.7rem;
-  width: calc(100% - 6rem);
-}
-.search_overlay form input:not(:-moz-placeholder-shown) + button {
-  display: block;
-}
-.search_overlay form input:not(:placeholder-shown) + button {
-  display: block;
-}
 .search_overlay form button {
   height: 5rem;
   border: 0;
@@ -140,7 +121,7 @@ body {
 .search_overlay form button:hover {
   background-color: #32a9e0;
 }
-.search_overlay form input[type="search"] {
+.search_overlay form input[type=search] {
   outline: 0;
   width: 100%;
   -webkit-backdrop-filter: blur(24px);
@@ -151,8 +132,8 @@ body {
   padding: 0 1.6rem;
   border-radius: 0.7rem;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: none;
   font-size: 1.8rem;
   transition: all 0.3s cubic-bezier(0, 0, 0.43, 1.49);
@@ -161,17 +142,36 @@ body {
   position: relative;
   border: 1px solid rgba(184, 184, 184, 0.202);
 }
-.search_overlay form input[type="search"]::-webkit-search-cancel-button {
+.search_overlay form input[type=search]::-webkit-search-cancel-button {
   display: none;
 }
-.search_overlay form input[type="search"]::-webkit-search-decoration {
+.search_overlay form input[type=search]::-webkit-search-decoration {
   display: none;
 }
-.search_overlay form input[type="search"]::-webkit-search-results-button {
+.search_overlay form input[type=search]::-webkit-search-results-button {
   display: none;
 }
-.search_overlay form input[type="search"]::-webkit-search-results-decoration {
+.search_overlay form input[type=search]::-webkit-search-results-decoration {
   display: none;
+}
+.search_overlay form input {
+  height: 5rem;
+  border: 0;
+  font-size: 1.8rem;
+}
+.search_overlay form input:not(:-moz-placeholder-shown) {
+  border-radius: 0.7rem 0 0 0.7rem;
+  width: calc(100% - 6rem);
+}
+.search_overlay form input:not(:placeholder-shown) {
+  border-radius: 0.7rem 0 0 0.7rem;
+  width: calc(100% - 6rem);
+}
+.search_overlay form input:not(:-moz-placeholder-shown) + button {
+  display: block;
+}
+.search_overlay form input:not(:placeholder-shown) + button {
+  display: block;
 }
 .search_overlay form label {
   position: absolute;
@@ -262,6 +262,9 @@ body {
   transition: all 0.3s;
 }
 .primary_nav_wrapper .nav_items a:hover::after {
+  width: 100%;
+}
+.primary_nav_wrapper .nav_items a:is(:link, :active, :visited).active::after {
   width: 100%;
 }
 .primary_nav_wrapper .search_btn {
@@ -487,7 +490,7 @@ footer {
 .footer_nav .footer_links.social {
   display: flex;
   -moz-column-gap: 1rem;
-  column-gap: 1rem;
+       column-gap: 1rem;
 }
 .footer_nav .footer_links.social a {
   font-size: 2rem;
@@ -623,7 +626,7 @@ footer {
     font-size: 1rem;
     width: 4rem;
   }
-  .search_overlay form input[type="search"] {
+  .search_overlay form input[type=search] {
     font-size: 1.2rem;
   }
   .primary_nav_wrapper .logo img {
@@ -681,7 +684,7 @@ footer {
   .footer_nav .footer_links.social {
     display: flex;
     -moz-column-gap: 0.3rem;
-    column-gap: 0.3rem;
+         column-gap: 0.3rem;
   }
 }
 /* ========================================================= */
@@ -866,7 +869,7 @@ footer {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   transition: 0.3s;
 }
 .swiper_blogs .swiper-slide.blog .title {
@@ -959,5 +962,237 @@ footer {
     padding: 0.5rem;
     line-height: 25px;
     letter-spacing: 1px;
+  }
+}
+/* ========== About Us =========== */
+.about .about_wrapper {
+  min-height: 1000px;
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.about .about_wrapper .card {
+  display: flex;
+  position: relative;
+}
+.about .about_wrapper .card .frame {
+  line-height: 0;
+  font-size: 0;
+}
+.about .about_wrapper .card .frame .header {
+  display: none;
+  font-size: 50px;
+  color: #0094d9;
+  border-left: 12px solid #0094d9;
+  height: 66px;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+.about .about_wrapper .card .frame .header span {
+  display: block;
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+.about .about_wrapper .card .text_container {
+  position: absolute;
+  max-width: 760px;
+  top: 40px;
+  left: 300px;
+}
+.about .about_wrapper .card .text_container .caption {
+  color: #0094d9;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-right: 12px solid #0094d9;
+  margin-bottom: 1.5rem;
+}
+.about .about_wrapper .card .text_container .caption span {
+  display: block;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-right: 2rem;
+}
+.about .about_wrapper .card .text_container .descript {
+  background-color: #fafafa;
+  padding: 2rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 1.5px;
+}
+.about .about_wrapper .card.second .frame {
+  margin-left: auto;
+  position: relative;
+}
+.about .about_wrapper .card.second img {
+  width: 500px;
+}
+.about .about_wrapper .card.second .text_container {
+  top: 80px;
+  left: 100px;
+}
+
+/* ========== Mission =========== */
+.mission .mission_wrapper {
+  margin-bottom: 4rem;
+}
+.mission .mission_wrapper .caption {
+  color: #0094d9;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  border-left: 12px solid #0094d9;
+  margin-bottom: 2.5rem;
+}
+.mission .mission_wrapper .caption span {
+  display: block;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-left: 2rem;
+}
+.mission .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.mission .cards .card {
+  color: #303030;
+  cursor: pointer;
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+}
+.mission .cards .card:not(:last-child) {
+  border-right: 1px solid #dadada;
+  padding-right: 2rem;
+}
+.mission .cards .card:hover .icon {
+  transform: scale(1.03);
+  border: 1px dashed #0094d9;
+}
+.mission .cards .card:hover img {
+  transform: scale(1.1);
+}
+.mission .cards .card:hover .title {
+  color: #0094d9;
+}
+.mission .cards .card:hover .text {
+  color: #0094d9;
+}
+.mission .cards .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  background-color: #fafafa;
+  border-radius: 50%;
+  border: 1px dashed #dadada;
+  transition: 0.3s;
+}
+.mission .cards .icon img {
+  width: 60px;
+  transition: 0.3s;
+}
+.mission .cards .title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+  margin: 1rem 0;
+  transition: 0.3s;
+}
+.mission .cards .text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 1.5px;
+  transition: 0.3s;
+}
+
+.misson .missions_container {
+  display: flex;
+}
+
+@media screen and (max-width: 1350px) {
+  .about .about_wrapper .card .text_container {
+    top: 0px;
+    max-width: 560px;
+  }
+  .about .about_wrapper .card.second .text_container {
+    top: 40px;
+    left: 0px;
+  }
+  .mission .cards .card {
+    flex: 1 1 250px;
+  }
+  .mission .cards .card:not(:last-child) {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about .about_wrapper {
+    gap: 0;
+  }
+  .about .about_wrapper .card {
+    flex-direction: column;
+  }
+  .about .about_wrapper .card .frame .header {
+    display: flex;
+  }
+  .about .about_wrapper .card .frame .header span {
+    font-size: 25px;
+  }
+  .about .about_wrapper .card .frame img {
+    width: 100%;
+    height: auto;
+  }
+  .about .about_wrapper .card .text_container {
+    position: static;
+    max-width: 100%;
+  }
+  .about .about_wrapper .card .text_container .caption {
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+    height: 66px;
+    justify-content: flex-start;
+    border-left: 12px solid #0094d9;
+    border-right: 0;
+  }
+  .about .about_wrapper .card .text_container .caption span {
+    font-size: 25px;
+    margin-right: 0;
+    margin-left: 2rem;
+  }
+  .about .about_wrapper .card .text_container .descript {
+    padding: 2rem 0;
+    font-size: 17px;
+    background-color: white;
+  }
+  .about .about_wrapper .card.second .frame {
+    margin-left: 0;
+  }
+  .mission .mission_wrapper .caption {
+    height: 66px;
+  }
+  .mission .mission_wrapper .caption span {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .mission .cards .card {
+    align-items: center;
+    justify-self: center;
+    text-align: center;
   }
 }

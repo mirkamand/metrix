@@ -1,0 +1,268 @@
+@import "../scss/variables";
+
+/* ========== About Us =========== */
+.about {
+	.about_wrapper {
+		min-height: 1000px;
+		margin: 4rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		.card {
+			display: flex;
+			position: relative;
+			.frame {
+				line-height: 0;
+				font-size: 0;
+				.header {
+					display: none;
+					font-size: 50px;
+					color: $primary_clr;
+					border-left: 12px solid $primary_clr;
+					height: 66px;
+					margin-bottom: 1.5rem;
+					align-items: center;
+					justify-content: flex-start;
+					span {
+						display: block;
+						margin-left: 2rem;
+						font-weight: 600;
+						font-size: 32px;
+						letter-spacing: 2px;
+					}
+				}
+			}
+			.text_container {
+				position: absolute;
+				max-width: 760px;
+				top: 40px;
+				left: 300px;
+				.caption {
+					color: $primary_clr;
+					height: 96px;
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					border-right: 12px solid $primary_clr;
+					margin-bottom: 1.5rem;
+					span {
+						display: block;
+						font-weight: 600;
+						font-size: 32px;
+						letter-spacing: 2px;
+						margin-right: 2rem;
+					}
+				}
+				.descript {
+					background-color: #fafafa;
+					padding: 2rem;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 28px;
+					letter-spacing: 1.5px;
+				}
+			}
+		}
+		.card.second {
+			.frame {
+				margin-left: auto;
+				position: relative;
+			}
+			img {
+				width: 500px;
+			}
+			.text_container {
+				top: 80px;
+				left: 100px;
+			}
+		}
+	}
+}
+
+/* ========== Mission =========== */
+.mission {
+	.mission_wrapper {
+		.caption {
+			color: $primary_clr;
+			height: 96px;
+			display: flex;
+			align-items: center;
+			border-left: 12px solid $primary_clr;
+			margin-bottom: 2.5rem;
+			span {
+				display: block;
+				font-weight: 600;
+				font-size: 32px;
+				letter-spacing: 2px;
+				margin-left: 2rem;
+			}
+		}
+		margin-bottom: 4rem;
+	}
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 2rem;
+		.card {
+			color: #303030;
+			cursor: pointer;
+			flex: 1 1 400px;
+			display: flex;
+			flex-direction: column;
+			&:not(:last-child) {
+				border-right: 1px solid #dadada;
+				padding-right: 2rem;
+			}
+			&:hover {
+				.icon {
+					transform: scale(1.03);
+					border: 1px dashed $primary_clr;
+				}
+				img {
+					transform: scale(1.1);
+				}
+				.title {
+					color: $primary_clr;
+				}
+				.text {
+					color: $primary_clr;
+				}
+			}
+		}
+		.icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 110px;
+			height: 110px;
+			background-color: #fafafa;
+			border-radius: 50%;
+			border: 1px dashed #dadada;
+			transition: 0.3s;
+			img {
+				width: 60px;
+				transition: 0.3s;
+			}
+		}
+		.title {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 30px;
+			letter-spacing: 1.5px;
+			margin: 1rem 0;
+			transition: 0.3s;
+		}
+		.text {
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 22px;
+			letter-spacing: 1.5px;
+			transition: 0.3s;
+		}
+	}
+}
+.misson {
+	.missions_container {
+		display: flex;
+	}
+}
+@media screen and (max-width: 1350px) {
+	.about {
+		.about_wrapper {
+			.card {
+				.text_container {
+					top: 0px;
+					max-width: 560px;
+				}
+			}
+			.card.second {
+				.text_container {
+					top: 40px;
+					left: 0px;
+				}
+			}
+		}
+	}
+	.mission {
+		.cards {
+			.card {
+				flex: 1 1 250px;
+				&:not(:last-child) {
+					border-right: none;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	.about {
+		.about_wrapper {
+			gap: 0;
+			.card {
+				flex-direction: column;
+				.frame {
+					.header {
+						display: flex;
+						span {
+							font-size: 25px;
+						}
+					}
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+				.text_container {
+					.caption {
+						span {
+							font-size: 25px;
+							margin-right: 0;
+							margin-left: 2rem;
+						}
+						margin-bottom: 0;
+						margin-top: 1.5rem;
+						height: 66px;
+						justify-content: flex-start;
+						border-left: 12px solid $primary_clr;
+						border-right: 0;
+					}
+					position: static;
+					max-width: 100%;
+					.descript {
+						padding: 2rem 0;
+						font-size: 17px;
+						background-color: white;
+					}
+				}
+			}
+			.card.second {
+				.frame {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	.mission {
+		.mission_wrapper {
+			.caption {
+				height: 66px;
+				span {
+					font-size: 25px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 680px) {
+	.mission {
+		.cards {
+			.card {
+				align-items: center;
+				justify-self: center;
+				text-align: center;
+			}
+		}
+	}
+}
