@@ -1,0 +1,57 @@
+.energies .swiper_blogs {
+  margin-bottom: 4rem;
+}
+
+.energies .swiper_blogs .swiper-wrapper {
+  height: fit-content;
+}
+
+.energies .swiper_blogs .swiper-slide.blog {
+  background: #ffffff;
+  height: auto;
+}
+
+.energies .swiper_blogs .swiper-slide.blog a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #303030;
+  margin-bottom: auto;
+  transition: var(--primary_transition_duration);
+}
+
+.energies .swiper_blogs .swiper-slide.blog:hover a {
+  color: var(--primary_clr);
+}
+
+.energies .swiper_blogs .swiper-slide.blog a .frame {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.energies .swiper_blogs .swiper-slide.blog img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: var(--primary_transition_duration);
+}
+
+.energies .swiper_blogs .swiper-slide.blog:hover img {
+  transform: scale(1.1);
+}
+
+.energies .swiper_blogs .swiper-slide.blog .title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1.2px;
+}
+
+.energies .swiper_blogs .swiper-slide.blog .subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1.2px;
+}

@@ -264,7 +264,7 @@ body {
 .primary_nav_wrapper .nav_items a:hover::after {
   width: 100%;
 }
-.primary_nav_wrapper .nav_items a:is(:link, :active, :visited).active::after {
+.primary_nav_wrapper .nav_items a.active::after {
   width: 100%;
 }
 .primary_nav_wrapper .search_btn {
@@ -1517,4 +1517,56 @@ footer {
 }
 .projects_container.third .swiper-slide:nth-child(6) .card::before {
   background-image: url("../images/project12.jpg");
+}
+
+.energies .swiper_blogs {
+  margin: 4rem 0;
+}
+.energies .swiper_blogs .swiper-wrapper {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.energies .swiper_blogs .swiper-slide.blog {
+  background: #ffffff;
+  height: auto;
+}
+.energies .swiper_blogs .swiper-slide.blog a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #303030;
+  margin-bottom: auto;
+  transition: 0.3s;
+}
+.energies .swiper_blogs .swiper-slide.blog a .frame {
+  overflow: hidden;
+  margin-bottom: 1rem;
+  height: 274px;
+}
+.energies .swiper_blogs .swiper-slide.blog:hover a {
+  color: #0094d9;
+}
+.energies .swiper_blogs .swiper-slide.blog:hover img {
+  transform: scale(1.1);
+}
+.energies .swiper_blogs .swiper-slide.blog img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s;
+}
+.energies .swiper_blogs .swiper-slide.blog .title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1.2px;
+}
+.energies .swiper_blogs .swiper-slide.blog .subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1.2px;
 }

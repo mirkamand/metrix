@@ -253,7 +253,8 @@ body {
 				}
 			}
 		}
-		a:is(:link, :active, :visited).active {
+
+		a.active {
 			&::after {
 				width: 100%;
 			}

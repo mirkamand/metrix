@@ -6,7 +6,7 @@ class Main_overlay extends HTMLElement {
                 <li class="nav_item"><a href="../pages/about.html">Haqqımızda</a></li>
                 <li class="nav_item"><a href="../pages/services.html">Xidmətlər</a></li>
                 <li class="nav_item"><a href="../pages/projects.html">Lahiyələr</a></li>
-                <li class="nav_item"><a href="#">Enerjilər</a></li>
+                <li class="nav_item"><a href="../pages/blogs.html">Enerjilər</a></li>
                 <li class="nav_item"><a href="#">Əlaqə</a></li>
             </ul>
         </div>
@@ -34,7 +34,7 @@ class Main_header extends HTMLElement {
                         <li class="nav_item"><a href="../pages/about.html">Haqqımızda</a></li>
                         <li class="nav_item"><a href="../pages/services.html">Xidmətlər</a></li>
                         <li class="nav_item"><a href="../pages/projects.html">Lahiyələr</a></li>
-                        <li class="nav_item"><a href="#">Enerjilər</a></li>
+                        <li class="nav_item"><a href="../pages/blogs.html">Enerjilər</a></li>
                         <li class="nav_item"><a href="#">Əlaqə</a></li>
                     </ul>
                     <button class="search_btn" name="btn_toggle" data-toggle="null"><img src="../logos/search_logo.png"

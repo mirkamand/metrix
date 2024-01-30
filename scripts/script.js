@@ -16,8 +16,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
 
   nav_links.forEach((link) => {
     if (link.href.includes(`${active_page}`)) {
+      console.log("Salam");
       link.classList.add("active");
-      console.log(active_page);
     }
   });
 
