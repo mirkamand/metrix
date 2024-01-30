@@ -1,0 +1,66 @@
+@import "../scss/variables";
+
+.contact {
+	.contact_wrapper {
+		margin: 4rem 0;
+		display: flex;
+		width: 100%;
+		gap: 2rem;
+		form {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			flex: 1 1 100%;
+			.title {
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 29px;
+				letter-spacing: 1.5px;
+				margin-bottom: 2rem;
+			}
+			input {
+				padding: 1rem;
+				margin-bottom: 1rem;
+				border: none;
+				background-color: #f7f6f6;
+			}
+			textarea {
+				padding: 1rem;
+				margin-bottom: 1rem;
+				border: none;
+				background-color: #f7f6f6;
+			}
+			.btn {
+				height: 52px;
+				background-color: $primary_clr;
+				border: none;
+				font-size: 14px;
+				color: white;
+				line-height: 16px;
+				letter-spacing: 1.5px;
+				transition: 0.3s;
+				cursor: pointer;
+				&:hover {
+					background-color: $primary_clr_light;
+				}
+			}
+		}
+		.frame {
+			flex: 1 1 100%;
+			font-size: 0;
+			line-height: 0;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	.contact {
+		.contact_wrapper {
+			flex-direction: column;
+		}
+	}
+}

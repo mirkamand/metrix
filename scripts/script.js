@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   const search_btn = document.querySelector(".search_btn");
   const primary_nav_wrapper = document.querySelector(".primary_nav_wrapper");
   const btns_toggle = document.querySelectorAll("[data-toggle]");
-  const active_page = window.location.pathname;
+  const active_page = window.location.href;
   const projects_tabs = document.querySelectorAll(".projects .tab_btn");
   const all_projects = document.querySelectorAll(
     ".projects .projects_container"
@@ -15,8 +15,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   const nav_links = document.querySelectorAll(".nav_items a");
 
   nav_links.forEach((link) => {
-    if (link.href.includes(`${active_page}`)) {
-      console.log("Salam");
+    if (link.href === active_page) {
       link.classList.add("active");
     }
   });
